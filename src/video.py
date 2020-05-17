@@ -2,19 +2,20 @@ from keras.preprocessing.image import img_to_array
 import imutils
 import cv2
 from keras.models import load_model
-import src.constants as const
 import numpy as np
 import json
-from querysql import addEmo
+import src.constants as const
+from src.querysql import addEmo
+
 from keras.models import model_from_json
 from tkinter import filedialog
 
-with open('models/Model_0.6706526279449463_16-8-18.h5.json','r') as f:
+with open('../models/Model_0.6708552837371826_17-0-29.json','r') as f:
     model_json = json.load(f)
 model = model_from_json(model_json)
-model.load_weights('models/Model_0.6706526279449463_16-8-18.h5')
+model.load_weights('../models/Model_0.6708552837371826_17-0-29.h5')
 
-face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+face_cascade = cv2.CascadeClassifier('../files/haarcascade_frontalface_default.xml')
 
 
 def video(idvideo):

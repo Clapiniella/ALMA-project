@@ -1,10 +1,10 @@
 from tkinter import *
 from PIL import ImageTk
 import PIL.Image
-import video as vi
-import webcam as we
+import src.video as vi
+import src.webcam as we
 from tkinter import filedialog
-import report as re 
+import src.report as re 
 
 HEIGHT = 1000
 WIDTH = 1000
